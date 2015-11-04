@@ -43,6 +43,7 @@ namespace Task3.Queue
         public void Reset()
         {
             current = new Node<T>(default(T));
+            current.next = head;
         }
     }
 }
