@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Task3.Queue
 {
-    public class CustomQueueEnumerator<T> : IEnumerator<T>
+    public struct CustomQueueEnumerator<T> : IEnumerator<T>
     {
         private Node<T> head;
         private Node<T> current;
         public CustomQueueEnumerator(Node<T> head)
         {
             this.head = head;
+            current = new Node<T>(default(T));
+            current.next = this.head;
         }
 
 

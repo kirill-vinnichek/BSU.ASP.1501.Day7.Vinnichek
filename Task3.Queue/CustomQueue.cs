@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task3.Queue
 {
-    internal sealed class Node<T>
+    public sealed class Node<T>
     {
         public Node<T> next;
         public T value;
